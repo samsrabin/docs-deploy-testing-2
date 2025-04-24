@@ -42,7 +42,10 @@ jobs:
           cd doc
           ./build_docs -r "${build_dir_top}" -c -d -v latest && \
           ./build_docs -r "${build_dir_top}" -c -d -v another && \
-          ln -s "${build_dir_top}/versions/latest/html/index.html" "${build_dir_top}/index.html"
+          landing_version="latest"
+          index_html="${build_dir_top}/index.html"
+          cp source/_templates/landing.index.html "${index_html}"
+          sed -i "s@PATH/TO/LANDING/PAGE.HTML@versions/latest/html/index.html@" "${index_html}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
