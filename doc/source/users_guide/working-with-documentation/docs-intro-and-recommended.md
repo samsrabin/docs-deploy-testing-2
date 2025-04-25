@@ -32,7 +32,7 @@ Your CTSM clone, from which you're building the documentation, also needs to be 
 Ensure that Docker Desktop is running. Then all you need to do is
 ```shell
 cd doc
-./build_docs -b $HOME/path/to/build-dir -d
+./build_docs -b $HOME/path/to/build-dir -c -d
 ```
 
 (Do `./build_docs --help` for more information and options.)
