@@ -76,7 +76,7 @@ This documentation gives detailed explanations of a number of workflows that can
 
 First, as one-time setup, you will need to install:
 - A recent version of git
-- A recent version of python (python3.5 or later), available as `python3`
+- A recent version of python (python3.7 or later), available as `python3`
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Git LFS](https://git-lfs.github.com/), including running `git lfs install` (required if you will be adding or editing any image files, otherwise you can skip Git LFS for now) You should then launch Docker's desktop application, and run `docker pull escomp/base`.
 
@@ -110,7 +110,7 @@ These instructions assume that you have the following available on your machine:
 
 - A recent version of git, ideally configured according to the recommendations in <https://github.com/ESCOMP/CTSM/wiki/Recommended-git-setup#one-time-git-configuration>.
 
-- A recent version of python (python3.5 or later)
+- A recent version of python (python3.7 or later)
   - Note that this must be available as `python3` (not just `python`). If your python installation did not create a `python3` command, you will need to create an alias or symbolic link so that python can be invoked via `python3`. On Windows, one developer reports success after copying `C:\Users\USERNAME\AppData\Local\Programs\Python\Python39\python.exe` to `python3.exe` (in the same location).
 
 .. _install-docker-and-download-the-required-container:
@@ -441,7 +441,7 @@ The following documentation assumes that you have the following available on you
 
 - A recent version of git, ideally configured according to the recommendations in <https://github.com/ESCOMP/CTSM/wiki/Recommended-git-setup#one-time-git-configuration>.
 
-- A recent version of python (python3.5 or later)
+- A recent version of python (python3.7 or later)
 
 - If using a Mac, the [Homebrew package manager](https://brew.sh/)
 

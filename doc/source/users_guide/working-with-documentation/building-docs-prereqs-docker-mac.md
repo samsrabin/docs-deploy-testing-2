@@ -12,18 +12,18 @@ To test whether you already have the required Python version, open a Terminal wi
 python3 --version
 ```
 
-If python3 is already set up, you'll see a version number. If that version is 3.6 or later, you should be ready as far as Python goes; continue to :ref:`docs-git-tools`.
+If python3 is already set up, you'll see a version number. If that version is 3.7 or later, you should be ready as far as Python goes; continue to :ref:`docs-git-tools`.
 
 If not, recent versions of macOS should print a messsage saying, "xcode-select: No developer tools were found, requesting install." A dialog box will then pop up that says, "The 'python3' command requires the command line developer tools. Would you like to install the tools now?" Press Install and go through the installation process. This will take a while; once it's done, test by doing `python3 --version` again. (You may need to open a new Terminal window.) If the printed version number looks good, continue to :ref:`docs-git-tools`.
 ..
   The paragraph above was tested 2025-04-25 on a fresh-ish installation of macOS 15.3.2.
 
-If instead `python3` gives "command not found," or the version is less than 3.6, you might need to install Python; continue to :ref:`aliasing-python3-to-python`.
+If instead `python3` gives "command not found," or the version is less than 3.7, you might need to install Python; continue to :ref:`aliasing-python3-to-python`.
 
 .. _aliasing-python3-to-python:
 
 ### Aliasing `python3` to `python`
-Try the same command as above, but instead of `python3` just do `python` (no number). If that version is 3.6 or later, you can tell your Mac that when you say `python3` you want it to use `python`:
+Try the same command as above, but instead of `python3` just do `python` (no number). If that version is 3.7 or later, you can tell your Mac that when you say `python3` you want it to use `python`:
 ```bash
 echo alias python3="$(which python)" >> ~/.bashrc
 echo alias python3="$(which python)" >> ~/.zshrc
@@ -53,7 +53,7 @@ instead of the "command not found" error, then you do have conda installed! (Not
 conda run -n base python3 --version
 ```
 
-Repeat with all your Conda environments as needed until you find one that's Python 3.6 or later. Let's say your `ENVNAME` environment works. In that case, just make sure to do `conda activate ENVNAME` before running the commands in the documentation-building instructions.
+Repeat with all your Conda environments as needed until you find one that's Python 3.7 or later. Let's say your `ENVNAME` environment works. In that case, just make sure to do `conda activate ENVNAME` before running the commands in the documentation-building instructions.
 
 If you don't have Conda yet, go on to the next section. Otherwise, continue to :ref:`docs-git-tools`.
 
