@@ -12,6 +12,6 @@ Working with CTSM Documentation
    docs-intro-and-recommended.md
    building-docs-prereqs-docker-mac.md
    building-docs-multiple-versions.md
-   caveats-for-working-with-markdown.md
+   tips-for-working-with-markdown.md
    building-docs-original-wiki.md
 

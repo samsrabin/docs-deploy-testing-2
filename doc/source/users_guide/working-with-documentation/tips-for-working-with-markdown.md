@@ -1,6 +1,6 @@
-.. _caveats-for-working-with-markdown:
+.. _tips-for-working-with-markdown:
 
-# Caveats for working with Markdown
+# Tips for working with Markdown
 
 .. _cross-references:
 
