@@ -14,7 +14,8 @@ python3 --version
 
 If python3 is already set up, you'll see a version number. If that version is 3.7 or later, you should be ready as far as Python goes; continue to :ref:`docs-git-tools`.
 
-If not, recent versions of macOS should print a messsage saying, "xcode-select: No developer tools were found, requesting install." A dialog box will then pop up that says, "The 'python3' command requires the command line developer tools. Would you like to install the tools now?" Press Install and go through the installation process. This will take a while; once it's done, test by doing `python3 --version` again. (You may need to open a new Terminal window.) If the printed version number looks good, continue to :ref:`docs-git-tools`.
+If not, recent versions of macOS should print a messsage saying, "xcode-select: No developer tools were found, requesting install." A dialog box will then pop up that says, "The 'python3' command requires the command line developer tools. Would you like to install the tools now?" Press Install and go through the installation process. This will take a while; once it's done, test by doing ``python3 --version`` again. (You may need to open a new Terminal window.) If the printed version number looks good, continue to :ref:`docs-git-tools`.
+
 ..
   The paragraph above was tested 2025-04-25 on a fresh-ish installation of macOS 15.3.2.
 
