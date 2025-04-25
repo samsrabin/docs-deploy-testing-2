@@ -24,3 +24,14 @@ We could also use rST's syntax like so:
 ```
 So to render :math:`y = mx + b`, ...
 ```
+
+## Comments
+If you want to add some text that's only visible in the documentation source file, there's not really a way to do that in Markdown. However, you can use the reStructuredText comment syntax in a Markdown document:
+
+```
+..
+  This will not appear on the webpage or even anywhere in the generated HTML.
+
+```
+
+Make sure to include at least one empty line after the comment text.
