@@ -15,7 +15,7 @@ ghcr.io/escomp/ctsm/ctsm-docs   latest       ab51446519a4   3 seconds ago   233M
 ...
 ```
 
-Then change the value of `default_docker_image` in `doc_builder/build_commands.py` to the listed `IMAGE ID`.
+Then change the value of `DEFAULT_DOCKER_IMAGE` in `doc_builder/build_commands.py` to the listed `IMAGE ID`.
 
 ## Publishing
 
@@ -45,7 +45,7 @@ docker push ghcr.io/escomp/ctsm/ctsm-docs:vX.Y.Z
 Then browse to the [container's GitHub page](https://github.com/ESCOMP/CTSM/pkgs/container/ctsm%2Fctsm-docs) to make sure this all worked and the image is public.
 
 ### Updating doc-builder
-Since you've updated the container, you will need to tell [doc-builder](https://github.com/ESMCI/doc-builder) to use the new one. Open a PR where you change the tag (the part after the colon) in the definition of `default_docker_image` in `doc_builder/build_commands.py`. Remember, **use the version number**, not "latest".
+Since you've updated the container, you will need to tell [doc-builder](https://github.com/ESMCI/doc-builder) to use the new one. Open a PR where you change the tag (the part after the colon) in the definition of `DEFAULT_DOCKER_IMAGE` in `doc_builder/build_commands.py`. Remember, **use the version number**, not "latest".
 
 ## See also
 
