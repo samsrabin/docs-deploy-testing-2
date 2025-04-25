@@ -20,6 +20,9 @@ We strongly suggest building the documentation on your personal computer before 
 ### Required software
 You will need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Git LFS](https://git-lfs.com/), and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine. In addition, you will need a decently modern installation of Python available from the command line as `python3`. We test the most with Python 3.13.2 (available in the `ctsm_pylib` conda environment; see :ref:`using-ctsm-pylib`), but any version 3.7 or later should work (and maybe earlier). You can do `python3 --version` on the command line to check your version.
 
+More information:
+- :ref:`building-docs-prereqs-docker-mac`
+
 ### Directories
 You will need a place to build the documentation. It's fine if that doesn't exist; the build tool will make it for you. Alternatively, you can clone the [ctsm-docs](https://github.com/ESCOMP/ctsm-docs) repository and build there. The only restriction is that, at least for the recommended method described here, **your build directory must be somewhere in your user home directory**, which we represent as `$HOME`. The instructions here assume you want to do your build in `$HOME/path/to/build-dir/`.
 
