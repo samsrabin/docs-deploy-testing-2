@@ -22,6 +22,7 @@ You will need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Gi
 
 More information:
 - :ref:`building-docs-prereqs-docker-mac`
+- :ref:`building-docs-prereqs-docker-windows`
 
 ### Directories
 You will need a place to build the documentation. It's fine if that doesn't exist; the build tool will make it for you. Alternatively, you can clone the [ctsm-docs](https://github.com/ESCOMP/ctsm-docs) repository and build there. The only restriction is that, at least for the recommended method described here, **your build directory must be somewhere in your user home directory**, which we represent as `$HOME`. The instructions here assume you want to do your build in `$HOME/path/to/build-dir/`.
