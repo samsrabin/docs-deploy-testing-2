@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+build_dir_top="$1"
+
+git checkout main
+./build_docs -r "${build_dir_top}" -v master -d -c
+
+git checkout release-clm5.0
+./build_docs -r "${build_dir_top}" -v release-clm5.0 -d -c
+
+git checkout main
+
+exit 0
