@@ -3,6 +3,8 @@ set -e
 
 build_dir_top="$1"
 
+git fetch --all
+
 git checkout main
 ./build_docs -r "${build_dir_top}" -v master -d -c
 
