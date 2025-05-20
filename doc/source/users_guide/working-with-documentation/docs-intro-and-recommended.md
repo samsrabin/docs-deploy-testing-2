@@ -41,6 +41,3 @@ cd doc
 You can then open the documentation in a web browser by browsing to `$HOME/path/to/build-dir/html/` and opening `index.html`.
 
 Note that there is a menu in the lower left of the webpage that lets readers switch between different versions of the documentation. The links to versions in this menu will not work when using the build command given above. If you wish to preview this version switching functionality, or you're building the docs in the process of actually updating the website, see :ref:`building-docs-multiple-versions`.
-
-## Further reading
-More complicated instructions and alternative methods for building the documentation can be found in :ref:`overview-of-the-recommended-build-method-and-alternative-methods`.
