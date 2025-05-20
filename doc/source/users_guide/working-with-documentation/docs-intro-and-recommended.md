@@ -12,17 +12,15 @@ Editing the documentation is as simple as opening the source file for the page y
 
 If you're confident in your changes, or you're _not_ confident in your ability to preview and test the documentation (see [Building the documentation (recommended method)](#building-the-documentation-recommended-method) below), all you need to do is commit your changes and submit a pull request to the [CTSM GitHub repo](https://github.com/ESCOMP/CTSM). Automated testing will check the updated documentation for any errors, and a CTSM software engineer will review your PR. If everything looks good, they will merge it into the codebase and update the website.
 
+## One-time setup
+In addition to a CTSM checkout in which to work, you will need to have some software installed in order to build the documentation:
+- :ref:`building-docs-prereqs-docker-mac`
+- :ref:`building-docs-prereqs-docker-windows`
+
 .. _building-the-documentation-recommended-method:
 
 ## Building the documentation (recommended method)
 We strongly suggest building the documentation on your personal computer before submitting a pull request, so that you can preview what your changes will look like. The recommended way to do this is using the `doc-builder` tool in conjunction with a "containerized" version of some required software.
-
-### Required software
-You will need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Git LFS](https://git-lfs.com/), and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine. In addition, you will need a decently modern installation of Python available from the command line as `python3`. We test the most with Python 3.13.2 (available in the `ctsm_pylib` conda environment; see :ref:`using-ctsm-pylib`), but any version 3.7 or later should work (and maybe earlier). You can do `python3 --version` on the command line to check your version.
-
-More information:
-- :ref:`building-docs-prereqs-docker-mac`
-- :ref:`building-docs-prereqs-docker-windows`
 
 ### Directories
 You will need a place to build the documentation. It's fine if that doesn't exist; the build tool will make it for you. Alternatively, you can clone the [ctsm-docs](https://github.com/ESCOMP/ctsm-docs) repository and build there. The only restriction is that, at least for the recommended method described here, **your build directory must be somewhere in your user home directory**, which we represent as `$HOME`. The instructions here assume you want to do your build in `$HOME/path/to/build-dir/`.

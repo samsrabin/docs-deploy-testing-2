@@ -1,6 +1,6 @@
 .. _building-docs-prereqs-docker-mac:
 
-# Prerequisites for building docs on Mac
+# Initial setup: Mac
 
 Note that you may need administrator privileges on your Mac for the installation steps detailed here.
 

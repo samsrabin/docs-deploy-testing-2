@@ -1,6 +1,6 @@
 .. _building-docs-prereqs-docker-windows:
 
-# Prerequisites for building docs on Windows
+# Initial setup: Windows
 
 Note that you may need administrator privileges on your PC (or approval from your IT department) for various steps here.
 
