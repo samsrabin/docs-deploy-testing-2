@@ -72,8 +72,8 @@ jobs:
       - name: Set image tag for docs build
         id: set-image-tag
         run: |
-          echo "IMAGE_TAG=$(echo '${{ steps.meta.outputs.tags }}' | cut -d',' -f1)" >> $GITHUB_ENV
-          echo "IMAGE_TAG=$(echo '${{ steps.meta.outputs.tags }}' | cut -d',' -f1)" >> $GITHUB_OUTPUT
+          echo "IMAGE_TAG=$(echo '${{ steps.meta.outputs.tags }}' | head -n 1 | cut -d',' -f1)" >> $GITHUB_ENV
+          echo "IMAGE_TAG=$(echo '${{ steps.meta.outputs.tags }}' | head -n 1 | cut -d',' -f1)" >> $GITHUB_OUTPUT
       - name: Build docs using container
         id: build-docs
         run: |
