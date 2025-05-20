@@ -2,7 +2,7 @@ name: Check Python formatting
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
     paths:
       - 'python/**'
       - 'cime_config/SystemTests/**'

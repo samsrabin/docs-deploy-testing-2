@@ -4,7 +4,7 @@ name: Build and publish ctsm-docs Docker image
 on:
   # Run this whenever something gets pushed to master
   push:
-    branches: ['master']
+    branches: ['*']
     paths:
       - 'doc/ctsm-docs_container/Dockerfile'
       - 'doc/ctsm-docs_container/requirements.txt'

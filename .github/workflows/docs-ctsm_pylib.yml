@@ -2,7 +2,7 @@ name: Test building docs with ctsm_pylib
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
     paths:
       - 'python/conda_env_ctsm_py.txt'
 

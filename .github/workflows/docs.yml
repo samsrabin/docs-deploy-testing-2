@@ -3,7 +3,7 @@ name: Test building docs when they're updated
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
     paths:
       - 'doc/**'
 
