@@ -21,7 +21,7 @@ import sys
 import sphinx_rtd_theme
 
 # Assumes you have substitutions.py on your path
-dir2add = os.path.join(os.path.dirname(__file__), os.pardir)
+dir2add = os.path.join(os.path.dirname(__file__))
 print(dir2add)
 sys.path.insert(0, dir2add)
 from substitutions import *  # pylint: disable=wildcard-import,import-error
