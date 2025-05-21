@@ -3,7 +3,7 @@ set -e
 set -x
 
 rm -rf _build _publish
-doc-builder/build_docs_all_versions
+./build_docs_all_versions
 
 rm -rf _build_docker
 ./build_docs -r _build_docker -v latest -d -c
