@@ -14,9 +14,9 @@ VERSION_LIST = [
         landing_version=True,
         ref=LATEST_REF,
     ),
-    # VersionInfo(
-    #     short_name="release-clm5.0",
-    #     display_name="CLM5.0",
-    #     ref="release-clm5.0",
-    # ),
+    VersionInfo(
+        short_name="release-clm5.0",
+        display_name="CLM5.0",
+        ref="release-clm5.0",
+    ),
 ]
