@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
+script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if [ ! -f doc-builder/build_docs_all_versions ]; then
-    script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-    ${script_dir}/../bin/git-fleximod update doc-builder
+    "${script_dir}"/../bin/git-fleximod update doc-builder
 fi
+
+cd "${script_dir}"
 
 echo "Running: make fetch-images"
 make fetch-images
