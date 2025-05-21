@@ -38,6 +38,7 @@ jobs:
       - name: Build docs using container
         id: build-docs
         run: |
+          bin/git-fleximod update -o
           build_dir_top="${PWD}/_build"
           cd doc
           ./build_docs_all_versions --site-root https://samsrabin.github.io/docs-deploy-testing-2
