@@ -67,7 +67,7 @@ release = u'CTSM master'
 version_label = 'the latest development code'
 
 # List of versions to populate version picker dropdown menu
-version_list = ["master", "release-clm5.0"]
+version_list = ["None", "release-clm5.0"]
 
 # version_label is not a standard sphinx variable, so we need some custom rst to allow
 # pages to use it. We need a separate replacement for the bolded version because it
