@@ -181,15 +181,12 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
-# List of versions to populate version picker dropdown menu
-version_list = [version.display_name for version in VERSION_LIST]
-
 html_context["current_version"] = os.environ.get("current_version")
 
 html_context["versions"] = []
 pages_root = os.environ.get("pages_root")
-for this_version in version_list:
+for this_version in VERSION_LIST:
     html_context["versions"].append([
         this_version.short_name,
-        os.path.join(pages_root, this_version.subdir),
+        os.path.join(pages_root, this_version.subdir()),
     ])
