@@ -3,7 +3,9 @@ Define the versions we want to build
 """
 import sys
 import os
-dir2add = os.path.join(os.path.dirname(__file__), os.pardir)
+dir2add = os.path.join(os.path.dirname(__file__), os.pardir, "doc-builder")
+if not os.path.exists(dir2add):
+    raise FileNotFoundError(dir2add)
 print(dir2add)
 sys.path.insert(0, dir2add)
 from doc_builder.version_info import VersionInfo
