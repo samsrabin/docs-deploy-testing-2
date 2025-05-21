@@ -187,6 +187,6 @@ html_context["versions"] = []
 pages_root = os.environ.get("pages_root")
 for this_version in VERSION_LIST:
     html_context["versions"].append([
-        this_version.short_name,
+        this_version.display_name,
         os.path.join(pages_root, this_version.subdir()),
     ])
