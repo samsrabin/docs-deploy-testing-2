@@ -38,6 +38,7 @@ jobs:
       - name: Build docs using container
         id: build-docs
         run: |
+          git fetch --all
           bin/git-fleximod update -o
           build_dir_top="${PWD}/_build"
           cd doc
