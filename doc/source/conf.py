@@ -60,11 +60,11 @@ author = u''
 # built documents.
 #
 # The short X.Y version.
-version = u'CTSM1'
+version = os.environ.get("version")
 # The full version, including alpha/beta/rc tags.
-release = u'CTSM master'
+release = os.environ.get("release")
 # CTSM-specific: version label used at the top of some pages.
-version_label = 'the latest development code'
+version_label = os.environ.get("version_label")
 
 # List of versions to populate version picker dropdown menu
 version_list = ["latest", "release-clm5.0"]
@@ -183,10 +183,6 @@ numfig_secnum_depth = 2
 
 def setup(app):
     app.add_css_file('css/custom.css')
-
-
-# THIS SHOULD NOT DISAPPEAR
-
 
 try:
     html_context
