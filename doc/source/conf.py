@@ -25,7 +25,7 @@ dir2add = os.path.join(os.path.dirname(__file__))
 print(dir2add)
 sys.path.insert(0, dir2add)
 from substitutions import *  # pylint: disable=wildcard-import,import-error
-from ..version_list import VERSION_LIST
+from version_list import VERSION_LIST
 
 
 # -- General configuration ------------------------------------------------
