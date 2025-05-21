@@ -181,9 +181,7 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
-html_context["current_version"] = os.environ.get("current_version")
-if html_context["current_version"] == "None":
-    ienfrerien
+html_context["current_version"] = os.environ.get("version_display_name")
 
 html_context["versions"] = []
 pages_root = os.environ.get("pages_root")
