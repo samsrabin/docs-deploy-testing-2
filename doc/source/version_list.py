@@ -1,6 +1,11 @@
 """
 Define the versions we want to build
 """
+import sys
+import os
+dir2add = os.path.join(os.path.dirname(__file__), os.pardir)
+print(dir2add)
+sys.path.insert(0, dir2add)
 from doc_builder.version_info import VersionInfo
 
 # Branch name, tag, or commit SHA whose version of certain files we want to preserve
