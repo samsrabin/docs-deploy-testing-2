@@ -25,6 +25,7 @@ dir2add = os.path.join(os.path.dirname(__file__))
 print(dir2add)
 sys.path.insert(0, dir2add)
 from substitutions import *  # pylint: disable=wildcard-import,import-error
+from version_list import VERSION_LIST
 
 
 # -- General configuration ------------------------------------------------
@@ -60,9 +61,6 @@ master_doc = 'index'
 project = u'ctsm'
 copyright = u'2020, UCAR'
 author = u''
-
-# List of versions to populate version picker dropdown menu
-version_list = ["latest", "release-clm5.0"]
 
 # version_label is not a standard sphinx variable, so we need some custom rst to allow
 # pages to use it. We need a separate replacement for the bolded version because it
@@ -162,9 +160,6 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
-
-
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'python': ('https://docs.python.org/', None)}
 
@@ -186,8 +181,15 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
+# List of versions to populate version picker dropdown menu
+version_list = [version.display_name for version in VERSION_LIST]
+
 html_context["current_version"] = os.environ.get("current_version")
 
 html_context["versions"] = []
+pages_root = os.environ.get("pages_root")
 for this_version in version_list:
-    html_context["versions"].append([this_version, f"../../../versions/{this_version}/html"])
+    html_context["versions"].append([
+        this_version.short_name,
+        os.path.join(pages_root, this_version.subdir),
+    ])
