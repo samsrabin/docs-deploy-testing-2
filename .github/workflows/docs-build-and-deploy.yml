@@ -40,17 +40,13 @@ jobs:
         run: |
           build_dir_top="${PWD}/_build"
           cd doc
-          ./build_docs_all_versions "${build_dir_top}"
-          landing_version="master"
-          index_html="${build_dir_top}/index.html"
-          cp source/_templates/landing.index.html "${index_html}"
-          sed -i "s@PATH/TO/LANDING/PAGE.HTML@versions/master/html/index.html@" "${index_html}"
+          ./build_docs_all_versions --site-root https://samsrabin.github.io/docs-deploy-testing-2
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload build dir
-          path: '_build'
+          # Upload publish dir
+          path: 'doc/_publish'
 
       - name: Deploy to GitHub Pages
         id: deployment
