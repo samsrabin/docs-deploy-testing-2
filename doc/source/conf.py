@@ -20,6 +20,13 @@ import os
 import sys
 import sphinx_rtd_theme
 
+# Assumes you have substitutions.py on your path
+dir2add = os.path.join(os.path.dirname(__file__))
+print(dir2add)
+sys.path.insert(0, dir2add)
+from substitutions import *  # pylint: disable=wildcard-import,import-error
+from version_list import VERSION_LIST
+
 
 # -- General configuration ------------------------------------------------
 
@@ -54,20 +61,6 @@ master_doc = 'index'
 project = u'ctsm'
 copyright = u'2020, UCAR'
 author = u''
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-#
-# The short X.Y version.
-version = u'CTSM1'
-# The full version, including alpha/beta/rc tags.
-release = u'CTSM master'
-# CTSM-specific: version label used at the top of some pages.
-version_label = 'the latest development code'
-
-# List of versions to populate version picker dropdown menu
-version_list = ["master", "release-clm5.0"]
 
 # version_label is not a standard sphinx variable, so we need some custom rst to allow
 # pages to use it. We need a separate replacement for the bolded version because it
@@ -167,9 +160,6 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
-
-
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'python': ('https://docs.python.org/', None)}
 
@@ -191,8 +181,13 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
-html_context["current_version"] = os.environ.get("current_version")
+if os.environ.get("version_dropdown"):
+    html_context["current_version"] = os.environ.get("version_display_name")
 
-html_context["versions"] = []
-for this_version in version_list:
-    html_context["versions"].append([this_version, f"../../../versions/{this_version}/html"])
+    html_context["versions"] = []
+    pages_root = os.environ.get("pages_root")
+    for this_version in VERSION_LIST:
+        html_context["versions"].append([
+            this_version.display_name,
+            os.path.join(pages_root, this_version.subdir()),
+        ])
