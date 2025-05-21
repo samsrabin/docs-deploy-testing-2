@@ -191,8 +191,6 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
-html_context["current_language"] = language
-
 html_context["current_version"] = os.environ.get("current_version")
 
 html_context["versions"] = []
