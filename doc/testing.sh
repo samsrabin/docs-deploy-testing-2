@@ -4,15 +4,18 @@ set -x
 
 
 # Build all docs using container
-rm -rf _build _publish_container
-./build_docs_all_versions -d
+rm -rf _build _publish*
+./build_docs_all_versions -d --site-root "$PWD/_publish"
+mv _publish ""$PWD/_publish_container""
 
-# Build all docs using ctsm_pylib
-rm -rf _build _publish_nocontainer
-conda run -n ctsm_pylib ./build_docs_all_versions
+# # Build all docs using ctsm_pylib
+# rm -rf _build _publish
+# d2="$PWD/_publish_nocontainer"
+# conda run -n ctsm_pylib ./build_docs_all_versions --site-root "$d2"
+# mv _publish "${d2}"
 
 # # Make sure container version is identical to no-container version
-# diff -qr _publish_container/ _publish_nocontainer/
+# diff -qr "${d1}" "${d2}"
 
 # # Check that -r -v works
 # rm -rf _build_docker
