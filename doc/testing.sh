@@ -6,7 +6,7 @@ set -x
 # Build all docs using container
 rm -rf _build _publish*
 ./build_docs_all_versions -d --site-root "$PWD/_publish"
-mv _publish ""$PWD/_publish_container""
+mv _publish _publish_container
 
 # # Build all docs using ctsm_pylib
 # rm -rf _build _publish
