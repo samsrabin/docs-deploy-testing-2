@@ -181,7 +181,11 @@ except NameError:
 
 html_context["display_lower_left"] = True
 
-if os.environ["version_dropdown"]:
+# Whether to show the version dropdown. If not set as environment variable, or environment variable
+# is Python-falsey, do not show it.
+version_dropdown = os.environ.get("version_dropdown")
+
+if version_dropdown:
     html_context["current_version"] = os.environ["version_display_name"]
 
     html_context["versions"] = []
