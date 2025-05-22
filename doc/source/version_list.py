@@ -11,7 +11,7 @@ sys.path.insert(0, dir2add)
 from doc_builder.version_info import VersionInfo
 
 # Branch name, tag, or commit SHA whose version of certain files we want to preserve
-LATEST_REF = "auto-version-publishing"
+LATEST_REF = "master"
 
 # List of version definitions
 VERSION_LIST = [
