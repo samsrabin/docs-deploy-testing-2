@@ -7,14 +7,14 @@ rm -rf _publish*
 # Build all docs using container
 rm -rf _build _publish
 d1="$PWD/_publish_container"
-./build_docs_all_versions -d --site-root "$PWD/_publish"
+./build_docs_all_versions -r _build -d --site-root "$PWD/_publish"
 # VERSION LINKS WILL NOT RESOLVE IN _publish_container
 cp -a _publish _publish_container
 
 # Build all docs using ctsm_pylib
 rm -rf _build _publish
 d2="$PWD/_publish_nocontainer"
-conda run -n ctsm_pylib ./build_docs_all_versions --site-root "$PWD/_publish"
+conda run -n ctsm_pylib ./build_docs_all_versions -r _build --site-root "$PWD/_publish"
 # VERSION LINKS WILL NOT RESOLVE IN _publish_nocontainer
 cp -a _publish "${d2}"
 
