@@ -8,20 +8,21 @@ if not os.path.exists(dir2add):
     raise FileNotFoundError(dir2add)
 print(dir2add)
 sys.path.insert(0, dir2add)
-from doc_builder.version_info import VersionInfo
+# pylint: disable=wrong-import-position
+from doc_builder.docs_version import DocsVersion  # pylint: disable=import-error,no-name-in-module
 
 # Branch name, tag, or commit SHA whose version of certain files we want to preserve
 LATEST_REF = "master"
 
 # List of version definitions
 VERSION_LIST = [
-    VersionInfo(
+    DocsVersion(
         short_name="latest",
         display_name="Latest development code",
         landing_version=True,
         ref=LATEST_REF,
     ),
-    VersionInfo(
+    DocsVersion(
         short_name="release-clm5.0",
         display_name="CLM5.0",
         ref="release-clm5.0",
