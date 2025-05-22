@@ -2,7 +2,7 @@
 set -e
 
 script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-if [ ! -f doc-builder/build_docs_all_versions ]; then
+if [ ! -f doc-builder/build_docs_to_publish ]; then
     "${script_dir}"/../bin/git-fleximod update doc-builder
 fi
 
@@ -11,8 +11,8 @@ cd "${script_dir}"
 echo "Running: make fetch-images"
 make fetch-images
 
-echo "Running: ./doc-builder/build_docs_all_versions $@"
+echo "Running: ./doc-builder/build_docs_to_publish $@"
 pwd
-./doc-builder/build_docs_all_versions "$@"
+./doc-builder/build_docs_to_publish "$@"
 
 exit 0
