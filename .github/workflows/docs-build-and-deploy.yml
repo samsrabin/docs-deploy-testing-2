@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Get all history, ensuring all branches are available for checkout
+          fetch-depth: 0
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -38,7 +41,6 @@ jobs:
       - name: Build docs using container
         id: build-docs
         run: |
-          git fetch --all
           bin/git-fleximod update -o
           build_dir_top="${PWD}/_build"
           cd doc
