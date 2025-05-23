@@ -3,10 +3,9 @@ Define the versions we want to build
 """
 import sys
 import os
-dir2add = os.path.join(os.path.dirname(__file__), os.pardir, "doc-builder")
+dir2add = os.path.join(os.path.dirname(__file__), "doc-builder")
 if not os.path.exists(dir2add):
     raise FileNotFoundError(dir2add)
-print(dir2add)
 sys.path.insert(0, dir2add)
 # pylint: disable=wrong-import-position
 from doc_builder.docs_version import DocsVersion  # pylint: disable=import-error,no-name-in-module

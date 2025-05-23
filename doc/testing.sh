@@ -9,7 +9,7 @@ rm -rf _build _publish
 d1="$PWD/_publish_container"
 ./build_docs_to_publish -r _build -d --site-root "$PWD/_publish"
 # VERSION LINKS WILL NOT RESOLVE IN _publish_container
-cp -a _publish _publish_container
+cp -a _publish "${d1}"
 
 # Build all docs using ctsm_pylib
 rm -rf _build _publish
