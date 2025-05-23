@@ -27,6 +27,10 @@ diff -qr "${d1}" "${d2}"
 rm -rf _build_docker
 ./build_docs -r _build_docker -v latest -d -c --conf-py-path doc-builder/test/conf.py --static-path ../_static --templates-path ../_templates
 
+# Check that Makefile method works
+rm -rf _build
+make SPHINXOPTS="-W --keep-going" BUILDDIR=${PWD}/_build html
+
 # Check that -b works
 rm -rf _build_docker
 ./build_docs -b _build_docker -d -c
