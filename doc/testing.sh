@@ -8,7 +8,7 @@ rm -rf _publish*
 # Also do a custom --conf-py-path
 rm -rf _build _publish
 d1="$PWD/_publish_container"
-./build_docs_to_publish -r _build -d --site-root "$PWD/_publish" --conf-py-path doc-builder/test/conf.py
+./build_docs_to_publish -r _build -d --site-root "$PWD/_publish" --conf-py-path doc-builder/test/conf.py --static-path ../_static --templates-path ../_templates
 # VERSION LINKS WILL NOT RESOLVE IN _publish_container
 cp -a _publish "${d1}"
 
@@ -25,7 +25,7 @@ diff -qr "${d1}" "${d2}"
 # Check that -r -v works
 # Also do a custom --conf-py-path
 rm -rf _build_docker
-./build_docs -r _build_docker -v latest -d -c --conf-py-path doc-builder/test/conf.py
+./build_docs -r _build_docker -v latest -d -c --conf-py-path doc-builder/test/conf.py --static-path ../_static --templates-path ../_templates
 
 # Check that -b works
 rm -rf _build_docker
