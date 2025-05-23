@@ -22,8 +22,9 @@ cp -a _publish "${d2}"
 diff -qr "${d1}" "${d2}"
 
 # Check that -r -v works
+# Also do a custom --conf-py-path
 rm -rf _build_docker
-./build_docs -r _build_docker -v latest -d -c
+./build_docs -r _build_docker -v latest -d -c --conf-py-path doc-builder/test/conf.py
 
 # Check that -b works
 rm -rf _build_docker
