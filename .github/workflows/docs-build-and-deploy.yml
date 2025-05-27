@@ -46,6 +46,12 @@ jobs:
           cd doc
           ./build_docs_to_publish -d --site-root https://samsrabin.github.io/docs-deploy-testing-2
 
+      # Copy redirect files to the publish directory
+      - name: Copy redirect files
+        run: |
+          cp index.html doc/_publish/
+          cp 404.html doc/_publish/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
