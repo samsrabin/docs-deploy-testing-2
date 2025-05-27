@@ -1,1 +1,0 @@
-This repository is a fork of the [CESM repo](https://github.com/ESCOMP/CTSM) with a special purpose: to test the build and deployment of documentation. You can find the docs at https://samsrabin.github.io/docs-deploy-testing/versions/latest/html/index.html.
